@@ -1,0 +1,3 @@
+HUBOT_SLACK_TOKEN=xoxb-3314296726-MEHaZzchAkMsgoZhcIsZYWC3 \
+HEROKU_URL=http://hanabot.ieeeatuhm.com \
+bin/hubot -a slack
