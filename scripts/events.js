@@ -39,7 +39,7 @@ function parse_events(response, callback){
             else return false;
         })
         .map(function(an_event){
-            return an_event.eventname + ":  " + "_" + (new Date(Date.parse(an_event.date))).toDateString() + "_";
+            return "__" + an_event.eventname + ":__  " + "_" + (new Date(Date.parse(an_event.date))).toDateString() + "_";
         })
         .join("\n");
         
