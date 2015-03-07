@@ -1,0 +1,3 @@
+cd /home/ieeeuhm/webapps/ieee_api
+source export_path
+npm install
