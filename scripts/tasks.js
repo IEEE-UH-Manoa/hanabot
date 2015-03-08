@@ -27,17 +27,18 @@ module.exports = function(robot) {
     });
 }
 
-
 function parse_tasks(response, callback){
     var output = ' ';
     var data = JSON.parse(response);
 
-    var output = data.join("\n");
+    var output = data.map(function(even){
+            return "   - " + even;
+        }) 
+        .join("\n");
         
 
     output = "\n" 
-        + "*Officers be slacking:* \n" 
-        + "----------------------\n"
+        + "*IEEE Officers be slacking:* \n" 
         + output;
 
     callback(output);
