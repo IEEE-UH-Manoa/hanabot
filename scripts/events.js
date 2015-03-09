@@ -39,7 +39,19 @@ function parse_events(response, callback){
             else return false;
         })
         .map(function(an_event){
-            return "*" + an_event.eventname + ":*  " + "_" + (new Date(Date.parse(an_event.date))).toDateString() + "_";
+            // var date_string = (new Date(Date.parse(an_event.date))).toDateString();
+            var monthNames = ["Jan", "Feb", "Mar", "April", "May", "Jun",
+              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+              ];
+            var dayNames =["Sun", "Mon", "Tue", "Wed", "Thu",
+              "Fri", "Sat"];
+
+            var date = (new Date(Date.parse(an_event.date)));
+            var date_string = dayNames[date.getDay()] + ", " 
+                + monthNames[date.getMonth()] + " " 
+                + date.getDate() + " ";
+
+            return "*" + date_string + "*" + "\t" + "_" + an_event.eventname + ":_";
         })
         .join("\n");
         
