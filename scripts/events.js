@@ -39,7 +39,7 @@ function parse_events(response, callback){
             else return false;
         })
         .map(function(an_event){
-            return "*" + an_event.eventname + ":*  " + "_" + (new Date(Date.parse(an_event.date))).toDateString() + "_";
+            return "\t - *" + an_event.eventname + ":*  " + "_" + (new Date(Date.parse(an_event.date))).toDateString() + "_";
         })
         .join("\n");
         
@@ -47,6 +47,7 @@ function parse_events(response, callback){
     output = "\n" 
         + "*Here are the upcoming events:* \n" 
         + "----------------------------------\n"
+        + ">>>\n"
         + output;
 
     callback(output);
