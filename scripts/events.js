@@ -50,15 +50,18 @@ function parse_events(response, callback){
             var date_string = dayNames[date.getDay()] + ", " 
                 + monthNames[date.getMonth()] + " " 
                 + date.getDate() + " ";
-
-            return "*" + date_string + "*" + "\t" + "_" + an_event.eventname + ":_";
+            
+            return date_string + "\t\t" + "" 
+                + an_event.eventname + "";
         })
         .join("\n");
         
 
+    var header = "*Date*\t\t\t*Event*\n";
     output = "\n" 
-        + "*Here are the next two week's events:* \n" 
+        + "Here are the next two week's events: \n" 
         + ">>>\n"
+        + header
         + output;
 
     callback(output);
