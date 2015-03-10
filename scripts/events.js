@@ -57,7 +57,7 @@ function parse_events(response, callback){
         .join("\n");
         
 
-    var header = "*Date*\t\t\t*Event*\n";
+    var header = "*Date*\t\t\t\t*Event*\n";
     output = "\n" 
         + "Here are the next two week's events: \n" 
         + ">>>\n"
