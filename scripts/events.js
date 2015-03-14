@@ -39,10 +39,8 @@ function parse_events(response, callback){
             else return false;
         })
         .map(function(an_event){
-            // var date_string = (new Date(Date.parse(an_event.date))).toDateString();
             var monthNames = ["Jan", "Feb", "Mar", "April", "May", "Jun",
-              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-              ];
+              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
             var dayNames =["Sun", "Mon", "Tue", "Wed", "Thu",
               "Fri", "Sat"];
 
