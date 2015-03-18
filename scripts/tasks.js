@@ -39,7 +39,7 @@ function parse_tasks(response, callback){
 
     output = "\n" 
         + "*IEEE Officers be slacking:* \n" 
-        + output;
+        + "```" + output + "```";
 
     callback(output);
 }
