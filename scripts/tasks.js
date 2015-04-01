@@ -32,7 +32,7 @@ function parse_tasks(response, callback){
     var data = JSON.parse(response);
 
     var output = data.map(function(even){
-            return "   - " + even;
+            return "\t\t-" + even;
         }) 
         .join("\n");
         

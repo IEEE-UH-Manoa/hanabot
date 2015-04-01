@@ -49,7 +49,7 @@ function parse_events(response, callback){
                 + monthNames[date.getMonth()] + " " 
                 + date.getDate() + " ";
             
-            return date_string + "\t" + "" 
+            return date_string + "\t\t" + "" 
                 + an_event.eventname + "";
         })
         .join("\n");
